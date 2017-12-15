@@ -74,8 +74,8 @@ void VRGame2::ResetScene()
 	Game:Instance()->DeletePhysicsConstraints();
 	
 	physicsFactory->CreateWall(glm::vec3(-20, 0, 10), 5, 5);
-	physicsFactory->CreateVehicle(glm::vec3(0, 5, -0));
-	physicsFactory->CreateVehicle(glm::vec3(-10, 5, -30));
+	physicsFactory->CreateCapsuleRagdoll(glm::vec3(0, 20, -0));
+	physicsFactory->CreateCapsuleRagdoll(glm::vec3(-10, 20, -30));
 	physicsFactory->CreateVehicle(glm::vec3(10, 5, -40));
 
 	physicsFactory->CreateVehicle(glm::vec3(-20, 5, -50));
@@ -160,7 +160,7 @@ void VRGame2::GravityGun(PhysicsController * & pickedUp, KinectHand * hand)
 }
 
 
-void VRGame2::Update(float timeDelta)
+void VRGame2::Update()
 {
 	//if (Game::Instance()->frame == 100)
 	//{
@@ -187,7 +187,7 @@ void VRGame2::Update(float timeDelta)
 	float moveSpeed = speed;
 	float timeToPass = 1.0f / fireRate;
 
-	elapsed += timeDelta;
+	elapsed += Time::deltaTime;
 
 	PrintText("Press R to reset scene");
 	static bool lastPressed = false;
@@ -210,7 +210,7 @@ void VRGame2::Update(float timeDelta)
 		//GravityGun(rightHandPickedUp, & person->hands[1]);
 	}
 
-	Game::Update(timeDelta);
+	Game::Update();
 }
 
 void VRGame2::Cleanup()

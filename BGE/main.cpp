@@ -5,7 +5,7 @@
 #include <GL/glew.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
-#include<glm.hpp>
+#include <glm.hpp>
 #include "Game.h"
 #include "TriangleTest.h"
 #include "TexturedCube.h"
@@ -14,11 +14,11 @@
 #include "ModelTest.h"
 #include "SteeringGame.h"
 #include "SceneGraphGame.h"
-//#include "Lab4.h"
-//#include "Lab5.h"
+#include "Lab4.h"
+#include "Lab5.h"
 #include "Lab3.h"
-//#include "Lab6.h"
-//#include "Lab7.h"
+#include "Lab6.h"
+#include "Lab7.h"
 #include "Buddha.h"
 #include "Game.h"
 #include <iostream>
@@ -41,6 +41,10 @@
 #include "Utils.h"
 #include "VRGame2.h"
 #include "SDL_syswm.h"
+#include "VRGame1.h"
+#include "Assignment.h"
+#include "GravityGame.h"
+#include "Animate.h"
 
 using namespace BGE;
 
@@ -49,7 +53,7 @@ int main(int argc, char *argv[])
 	// http://www.youtube.com/watch?v=EEbVHxOkTxw
 	Params::Load("default");
 
-	shared_ptr<Game> game = make_shared<Lab3>();
+	shared_ptr<Game> game = make_shared<Animate>();
 	game->Run();
 	
 	return 0;

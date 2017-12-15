@@ -18,7 +18,7 @@ float BGE::RandomFloat()
 GameComponent::GameComponent(bool hasTransform)
 {
 	speed = 10.0f;
-	parent = NULL;
+	parent = nullptr;
 	tag = "Nothing";
 	if (hasTransform)
 	{
@@ -83,7 +83,7 @@ bool GameComponent::Initialise()
 		while (it != children.end())
 		{
 			(*it)->initialised = (*it)->Initialise();
-			*it++;
+			++ it;
 		}
 	}
 	catch (BGE::Exception e)
@@ -166,7 +166,7 @@ void GameComponent::SetAlive(bool alive)
 	}
 }
 
-void GameComponent::Update(float timeDelta) {	
+void GameComponent::Update() {	
 	// Update all the children
 	std::list<std::shared_ptr<GameComponent>>::iterator it = children.begin();
 	while (it != children.end())
@@ -177,7 +177,7 @@ void GameComponent::Update(float timeDelta) {
 			current->alive = false;
 		}
 		current->parent = This();
-		current->Update(timeDelta);
+		current->Update();
 		if (!current->alive)
 		{
 			current->parent = nullptr;
@@ -221,7 +221,7 @@ void GameComponent::Attach(shared_ptr<GameComponent> child)
 		child->transform = transform; 
 	}
 	// Set up transform parenting
-	if (transformOwner && child->transformOwner)
+	if (child->transformOwner)
 	{
 		child->transform->parent = transform;
 	}

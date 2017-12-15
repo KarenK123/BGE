@@ -11,7 +11,7 @@ const glm::vec3 Transform::basisRight = glm::vec3(1, 0, 0);
 Transform::Transform(void)
 {
 	position = glm::vec3(0, 0, 0); 
-	look = glm::vec3(0, 0, -1); 
+	look = glm::vec3(0, 0, - 1); 
 	right = glm::vec3(1, 0, 0); 
 	up = glm::vec3(0, 1, 0); 
 	world = glm::mat4(1.0f); // Identity
@@ -35,7 +35,7 @@ void Transform::RecalculateVectors()
 }
 
 void Transform::Calculate()
-{
+{	
 	worldNoScale = glm::translate(glm::mat4(1), position) * glm::mat4_cast(orientation);
 	world = worldNoScale * glm::scale(glm::mat4(1), scale);
 	RecalculateVectors();
@@ -141,6 +141,8 @@ void Transform::Pitch(float angle, bool limitRotation)
 	*/
 	moved = true;
 }
+
+
 
 void Transform::Yaw(float angle)
 {

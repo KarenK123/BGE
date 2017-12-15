@@ -42,6 +42,9 @@
     <Filter Include="Prefabs">
       <UniqueIdentifier>{697651d2-0cd7-45c2-b4a6-56fe6f15526c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kinect1">
+      <UniqueIdentifier>{a87354c5-e358-43d6-9181-2d883053f9db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -212,6 +215,42 @@
     <ClCompile Include="Lab3.cpp">
       <Filter>Labs</Filter>
     </ClCompile>
+    <ClCompile Include="Lab4.cpp">
+      <Filter>Labs</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5.cpp">
+      <Filter>Labs</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab6.cpp">
+      <Filter>Labs</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab7.cpp">
+      <Filter>Labs</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyGame.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="VRGame1.cpp">
+      <Filter>Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Kinect1</Filter>
+    </ClCompile>
+    <ClCompile Include="Assignment.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Animate.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimateController.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ButterflyEffect.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -379,6 +418,29 @@
     <ClInclude Include="Lab3.h">
       <Filter>Labs</Filter>
     </ClInclude>
+    <ClInclude Include="Lab4.h">
+      <Filter>Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5.h">
+      <Filter>Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab6.h">
+      <Filter>Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab7.h">
+      <Filter>Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyGame.h" />
+    <ClInclude Include="VRGame1.h">
+      <Filter>Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>Kinect1</Filter>
+    </ClInclude>
+    <ClInclude Include="Assignment.h" />
+    <ClInclude Include="Animate.h" />
+    <ClInclude Include="AnimateController.h" />
+    <ClInclude Include="ButterflyEffect.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\CubeShader.fragmentshader">
